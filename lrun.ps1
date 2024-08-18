@@ -1,8 +1,6 @@
 #
 # run exe file that has already been compiled before
 #
-
-
 function getExePathFromCMakeLists()
 {
   $content = Get-Content -Path "./CMakeLists.txt"
@@ -33,6 +31,6 @@ function getExePathFromCMakeLists()
 }
 
 $exePath = getExePathFromCMakeLists
-Write-Host "start running as follows..."
-Write-Host "=================================================="
+#Write-Host "start running as follows..."
+#Write-Host "=================================================="
 Invoke-Expression $exePath

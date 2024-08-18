@@ -1,10 +1,11 @@
 CompileFlags:
   Add: [
-    "-std=c++17",
+    "-std=c++17", # needed when using MSVC
     "-IC:\\EDisk\\CppCodes\\CodeTemplates\\WinCppTemplate\\includes", # you should replace this to your own include path of this project
     -Wno-microsoft-goto,
     -Wno-nonportable-include-path,
     -Wno-microsoft-extra-qualification,
+    -Wunused-variable,
     # -Wno-unused-value,
   ] # ignore some specific warnings
   CompilationDatabase: build/       # Search build/ directory for compile_commands.json
