@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.25.0)
-project(WinCppTemplate VERSION 1.0)
+project(WinCppTemplate VERSION 1.0 LANGUAGES CXX)
 
 # Specify the C++ standard
 set(CMAKE_CXX_STANDARD 17)
