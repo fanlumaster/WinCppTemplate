@@ -1,16 +1,23 @@
 cmake_minimum_required(VERSION 3.25.0)
 project(WinCppTemplate VERSION 1.0)
 
-# specify the C++ standard
+# Specify the C++ standard
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
+add_definitions(
+    /D_UNICODE=1
+    /DUNICODE=1
+)
+
 include_directories("./includes/")
 
-add_compile_options("$<$<C_COMPILER_ID:MSVC>:/utf-8>")
-add_compile_options("$<$<CXX_COMPILER_ID:MSVC>:/utf-8>")
-
 set(MY_EXECUTABLE_NAME "WinCppTemplate")
-add_executable(${MY_EXECUTABLE_NAME} "./src/main.cpp")
+set(
+  SOURCE_FILES
+  "./src/main.cpp"
+)
+
+add_executable(${MY_EXECUTABLE_NAME} ${SOURCE_FILES})

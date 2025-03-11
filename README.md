@@ -5,15 +5,12 @@ This is a template for c++ in Windows.
 I use the tool chains below:
 
 - CMake
+- MSVC(provided by Visual Studio 2022)
 - pwsh7
 - Neovim
 - clangd
 
-Notice that, you should replace the line in the `.clangd` file below to your own include path of this project,
+Of course, you can replace Neovim with VSCode.
 
-```
-"-IC:\\EDisk\\CppCodes\\CodeTemplates\\WinCppTemplate\\includes", # you should replace this to your own include path of this project
-```
-
-Then, have fun writting c++ in Windows.
+Have fun writting C++ in Windows.
 
